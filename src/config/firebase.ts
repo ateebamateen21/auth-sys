@@ -1,6 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+//for google auth
+import { GoogleAuthProvider } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,3 +20,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 //this app variable is  the one which will connect oru front-end to our firebase backend. It has all the configuration that we need to connect to our firebase backend.
+
+export const googleProvider = new GoogleAuthProvider();
+//creating instance of the clas 'GoogleAuthProvider".
+
